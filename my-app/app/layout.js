@@ -1,5 +1,6 @@
 import { Raleway as RalewayFont } from "next/font/google"
 import "./globals.css"
+import Header from "./_components/Header"
 
 const raleway = RalewayFont({ subsets: ["latin"], weight: "500" })
 
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={raleway.className}>{children}</body>
+      <body className={raleway.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
