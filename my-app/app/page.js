@@ -1,5 +1,4 @@
-import { Button } from "@/components/UI/button"
-import Image from "next/image"
+
 
 export default function Home() {
   return (

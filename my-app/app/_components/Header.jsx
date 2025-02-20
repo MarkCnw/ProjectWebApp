@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { Gamepad2, Search } from 'lucide-react'
-import { Button } from '@/components/UI/button'
 
 function Header() {
   return (
@@ -27,7 +26,6 @@ function Header() {
           </div>
           <div>
               
-              <Button>Login</Button>
           </div>
     </div>
   )
