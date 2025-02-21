@@ -15,7 +15,7 @@ import { getCategory } from "../_utils/GlobalApi";
 
   
 function Header() {
-
+    
     useEffect(() => {
         getCategoryList()
 },[])
@@ -23,7 +23,7 @@ function Header() {
     //get Category List
     const getCategoryList = () => {
         getCategory().then(resp => {
-            console.log("CategoryList Resp", resp);
+            console.log("CategoryList Resp", resp,data.data);
         }).catch(error => {
             console.error("Error fetching categories:", error);
         });
