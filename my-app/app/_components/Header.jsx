@@ -11,7 +11,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from '@/components/UI/dropdown-menu'
-import { getCategory } from "../_utils/GlobalApi";
+import GlobalApi from "../_utils/GlobalApi";
 
   
 function Header() {
@@ -22,12 +22,10 @@ function Header() {
 
     //get Category List
     const getCategoryList = () => {
-        getCategory().then(resp => {
-            console.log("CategoryList Resp", resp,data.data);
-        }).catch(error => {
-            console.error("Error fetching categories:", error);
-        });
-    };
+        GlobalApi.getCategory().then(resp => {
+            console.log("CategoryList Resp", resp.data.data);
+        })
+    }
     
 
   return (
